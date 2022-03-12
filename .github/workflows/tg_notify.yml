@@ -20,4 +20,4 @@ jobs:
         env:
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-        run: python tg-notification.py
+        run: python ./.github/scripts/tg-notification.py
