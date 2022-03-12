@@ -1,0 +1,23 @@
+name: send tg notification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.0'
+
+      - name: send
+        env:
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+        run: python tg-notification.py
