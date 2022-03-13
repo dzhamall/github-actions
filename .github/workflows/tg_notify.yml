@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  setup python and send:
+  setup-python-and-send:
     runs-on: ubuntu-latest
     steps:
 
