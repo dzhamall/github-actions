@@ -2,8 +2,8 @@ import os
 import requests
 
 # get token and channel_id from environment variables
-TOKEN = os.environ('TG_BOT_TOKEN')
-CHANNEL_ID = os.environ('CHANNEL_ID')
+TOKEN = os.environ.get('TG_BOT_TOKEN')
+CHANNEL_ID = os.environ.get('CHANNEL_ID')
 
 # target url and data
 url = "https://api.telegram.org/bot" + TOKEN + "/sendMessage"
